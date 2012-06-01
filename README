@@ -1,0 +1,36 @@
+Programs of Connected Component Labeling (CCL) on CPU / GPU
+
+Objective:
+
+  To solve the problem of the CUDA programming contest (TopCoder/NVIDIA CUDA Superhero Challenge 1; http://community.topcoder.com/longcontest/?module=ViewProblemStatement&rd=13957&pm=10644).
+
+
+To compile source files:
+
+  $ make
+
+
+Create below files:
+
+  ccl_np_cpu   # Neighbour Propagation on CPU
+  ccl_np_gpu   # Neighbour Propagation on CPU
+  ccl_dpl_cpu  # Directional Propagation Labelling on CPU
+  ccl_dpl_gpu  # Directional Propagation Labelling on GPU
+  ccl_le_cpu   # Label Equivalence on CPU
+  ccl_le_gpu   # Label Equivalence on GPU
+
+
+To create input data from image files:
+
+  Usage: image2input.py input_image output_text [degree_of_connectivity=4 threashold=0]
+
+ Example)
+  $ ./image2input.py image.jpg input.dat 8 10
+  $ ./ccl_le_cpu input.dat > result.txt
+
+
+References:
+
+  1. K. Hawick, A. Leist and D. Playne, Parallel graph component labelling with GPUs and CUDA, Parallel Computing 36 (12) 655-678 (2010)
+  2. O. Kalentev, A. Rai, S. Kemnitz and R. Schneider, Connected component labeling on a 2D grid using CUDA, J. Parallel Distrib. Comput. 71 (4) 615-620 (2011)
+  3. V. M. A. Oliveira and  R. A. Lotufo, A study on connected components labeling algorithms using GPUs, SIBGRAPI (2010)
