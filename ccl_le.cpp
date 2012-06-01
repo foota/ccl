@@ -1,4 +1,4 @@
-// Marathon Match - CCL
+// Marathon Match - CCL - Label Equivalence
 
 #include <iostream>
 #include <iomanip>
